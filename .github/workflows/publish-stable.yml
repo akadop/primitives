@@ -13,6 +13,7 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   publish-stable:
+    if: github.repository == 'radix-ui/primitives'
     name: Version or publish
     timeout-minutes: 15
     runs-on: ubuntu-latest

@@ -22,6 +22,7 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   publish-snapshot:
+    if: github.repository == 'radix-ui/primitives'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
